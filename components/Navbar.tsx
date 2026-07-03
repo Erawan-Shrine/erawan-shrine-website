@@ -24,7 +24,7 @@ export default function Navbar() {
         <div className="flex h-16 items-center justify-between gap-3">
           <Link href="/" className="flex items-center gap-2 shrink-0">
             <span className="text-2xl">🙏</span>
-            <span className="font-display font-semibold tracking-wide text-shrine-goldLight text-base sm:text-xl">
+            <span className="font-display font-semibold text-shrine-goldLight text-base sm:text-xl">
               {lang === "th" ? "ศาลพระพรหมเอราวัณ" : "Erawan Shrine"}
             </span>
           </Link>

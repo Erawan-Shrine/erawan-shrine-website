@@ -122,7 +122,7 @@ export default function HomeContent() {
       {/* Four faces */}
       <section className="mx-auto max-w-5xl px-4 sm:px-6 py-14">
         <div className="divider-ornament mb-3 max-w-xs mx-auto">
-          <span className="text-shrine-gold text-xs tracking-[0.3em] uppercase whitespace-nowrap">
+          <span className="text-shrine-gold text-xs uppercase whitespace-nowrap">
             {t.facesLabel}
           </span>
         </div>
@@ -136,7 +136,7 @@ export default function HomeContent() {
               className="rounded-xl bg-shrine-paper border border-shrine-gold/30 card-shadow p-5 text-center"
             >
               <div className="text-3xl mb-2">{f.icon}</div>
-              <div className="text-xs text-shrine-gold uppercase tracking-wide mb-1">
+              <div className="text-xs text-shrine-gold uppercase mb-1">
                 {f.title}
               </div>
               <div className="font-medium text-shrine-ink">{f.meaning}</div>
