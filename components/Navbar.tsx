@@ -2,27 +2,30 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useLanguage } from "@/context/LanguageContext";
+import LanguageToggle from "@/components/LanguageToggle";
 
 const links = [
-  { href: "/", label: "หน้าแรก" },
-  { href: "/#prayer", label: "บทสวดมนต์" },
-  { href: "/worship", label: "วิธีสักการะ" },
-  { href: "/history", label: "ประวัติศาล" },
-  { href: "/visit", label: "การเดินทาง" },
-  { href: "/gallery", label: "แกลเลอรี" },
+  { href: "/", th: "หน้าแรก", en: "Home" },
+  { href: "/#prayer", th: "บทสวดมนต์", en: "Prayer" },
+  { href: "/worship", th: "วิธีสักการะ", en: "How to Worship" },
+  { href: "/history", th: "ประวัติศาล", en: "History" },
+  { href: "/visit", th: "การเดินทาง", en: "Visit" },
+  { href: "/gallery", th: "แกลเลอรี", en: "Gallery" },
 ];
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
+  const { lang } = useLanguage();
 
   return (
     <header className="sticky top-0 z-50 bg-shrine-redDark/95 backdrop-blur text-shrine-cream shadow-lg">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-16 items-center justify-between gap-3">
           <Link href="/" className="flex items-center gap-2 shrink-0">
             <span className="text-2xl">🙏</span>
-            <span className="font-display font-semibold tracking-wide text-shrine-goldLight text-lg sm:text-xl">
-              ศาลพระพรหมเอราวัณ
+            <span className="font-display font-semibold tracking-wide text-shrine-goldLight text-base sm:text-xl">
+              {lang === "th" ? "ศาลพระพรหมเอราวัณ" : "Erawan Shrine"}
             </span>
           </Link>
 
@@ -33,24 +36,27 @@ export default function Navbar() {
                 href={l.href}
                 className="hover:text-shrine-goldLight transition-colors"
               >
-                {l.label}
+                {lang === "th" ? l.th : l.en}
               </Link>
             ))}
           </nav>
 
-          <button
-            className="md:hidden text-2xl"
-            aria-label="เปิดเมนู"
-            onClick={() => setOpen(!open)}
-          >
-            {open ? "✕" : "☰"}
-          </button>
+          <div className="flex items-center gap-3">
+            <LanguageToggle />
+            <button
+              className="md:hidden text-2xl"
+              aria-label="เปิดเมนู"
+              onClick={() => setOpen(!open)}
+            >
+              {open ? "✕" : "☰"}
+            </button>
+          </div>
         </div>
       </div>
 
       {open && (
         <nav className="md:hidden border-t border-shrine-gold/30 bg-shrine-redDark">
-          <div className="mx-auto max-w-6xl px-4 py-3 flex flex-col gap-3 text-sm">
+          <div className="mx-auto max-w-6xl px-4 py-4 flex flex-col gap-4 text-base">
             {links.map((l) => (
               <Link
                 key={l.href}
@@ -58,7 +64,7 @@ export default function Navbar() {
                 onClick={() => setOpen(false)}
                 className="py-1 hover:text-shrine-goldLight transition-colors"
               >
-                {l.label}
+                {lang === "th" ? l.th : l.en}
               </Link>
             ))}
           </div>

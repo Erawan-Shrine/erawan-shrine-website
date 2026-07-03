@@ -1,0 +1,98 @@
+"use client";
+
+import { useLanguage } from "@/context/LanguageContext";
+
+const text = {
+  th: {
+    title: "ข้อมูลการเดินทาง",
+    hoursTitle: "เวลาเปิด-ปิด",
+    hours: "ทุกวัน 06:00 – 22:00 น.",
+    free: "ไม่มีค่าเข้าชม",
+    addressTitle: "ที่อยู่",
+    address: "สี่แยกราชประสงค์ ถนนราชดำริ แขวงลุมพินี เขตปทุมวัน กรุงเทพมหานคร 10330",
+    mapTitle: "แผนที่ศาลพระพรหมเอราวัณ",
+    travelTitle: "การเดินทาง",
+    travel: [
+      {
+        icon: "🚉",
+        text: "รถไฟฟ้า BTS สายสุขุมวิท ลงสถานีชิดลม (Chit Lom) ทางออก 8 เดินเชื่อมสกายวอล์กมาที่สี่แยกราชประสงค์",
+      },
+      { icon: "🚌", text: "รถประจำทางสาย 15, 25, 40 และสายอื่น ๆ ที่ผ่านถนนราชดำริ" },
+      {
+        icon: "🚕",
+        text: "แท็กซี่/แอปเรียกรถ ระบุจุดหมายว่า “ศาลพระพรหมเอราวัณ ราชประสงค์”",
+      },
+    ],
+  },
+  en: {
+    title: "Visitor Information",
+    hoursTitle: "Opening Hours",
+    hours: "Daily 06:00 – 22:00",
+    free: "Free admission",
+    addressTitle: "Address",
+    address: "Ratchaprasong Intersection, Ratchadamri Road, Lumphini, Pathum Wan, Bangkok 10330",
+    mapTitle: "Erawan Shrine map",
+    travelTitle: "Getting There",
+    travel: [
+      {
+        icon: "🚉",
+        text: "BTS Sukhumvit Line to Chit Lom station, Exit 8, then walk via the skywalk to Ratchaprasong intersection.",
+      },
+      { icon: "🚌", text: "Bus routes 15, 25, 40 and others that run along Ratchadamri Road." },
+      {
+        icon: "🚕",
+        text: "Taxi / ride-hailing app: give the destination as “Erawan Shrine, Ratchaprasong.”",
+      },
+    ],
+  },
+};
+
+export default function VisitContent() {
+  const { lang } = useLanguage();
+  const t = text[lang];
+
+  return (
+    <div className="mx-auto max-w-4xl px-4 sm:px-6 py-14">
+      <h1 className="font-display text-3xl sm:text-4xl font-bold text-shrine-red text-center mb-10">
+        {t.title}
+      </h1>
+
+      <div className="grid sm:grid-cols-2 gap-5 mb-10">
+        <div className="rounded-xl bg-shrine-paper border border-shrine-gold/30 card-shadow p-6">
+          <div className="text-2xl mb-2">🕒</div>
+          <h2 className="font-semibold text-shrine-red mb-1">{t.hoursTitle}</h2>
+          <p className="text-shrine-ink/80">{t.hours}</p>
+          <p className="text-shrine-ink/60 text-sm mt-1">{t.free}</p>
+        </div>
+        <div className="rounded-xl bg-shrine-paper border border-shrine-gold/30 card-shadow p-6">
+          <div className="text-2xl mb-2">📍</div>
+          <h2 className="font-semibold text-shrine-red mb-1">{t.addressTitle}</h2>
+          <p className="text-shrine-ink/80">{t.address}</p>
+        </div>
+      </div>
+
+      <div className="rounded-xl overflow-hidden border border-shrine-gold/30 card-shadow mb-10">
+        <iframe
+          title={t.mapTitle}
+          src="https://www.google.com/maps?q=Erawan+Shrine+Bangkok&output=embed"
+          width="100%"
+          height="360"
+          style={{ border: 0 }}
+          loading="lazy"
+        />
+      </div>
+
+      <div className="rounded-xl bg-shrine-paper border border-shrine-gold/30 card-shadow p-6">
+        <h2 className="font-semibold text-shrine-red mb-3">{t.travelTitle}</h2>
+        <ul className="space-y-2 text-shrine-ink/80">
+          {t.travel.map((item) => (
+            <li key={item.text} className="flex gap-2">
+              <span className="text-shrine-gold">{item.icon}</span>
+              <span>{item.text}</span>
+            </li>
+          ))}
+        </ul>
+      </div>
+    </div>
+  );
+}

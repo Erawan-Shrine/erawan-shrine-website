@@ -91,15 +91,18 @@ export default function PrayerChant() {
           {chant.title}
         </h2>
 
-        <div className="flex justify-center gap-2 mb-8">
+        <p className="text-center text-xs text-shrine-ink/50 mb-3 uppercase tracking-wide">
+          เลือกภาษาบทสวด · Select chant language
+        </p>
+        <div className="flex justify-center gap-3 mb-8 flex-wrap">
           {(Object.keys(tabLabels) as Lang[]).map((key) => (
             <button
               key={key}
               onClick={() => setLang(key)}
-              className={`px-4 py-1.5 rounded-full text-sm font-medium border transition-colors ${
+              className={`min-w-[110px] px-6 py-3 rounded-full text-lg sm:text-xl font-bold border-2 shadow-sm transition-colors ${
                 lang === key
-                  ? "bg-shrine-red text-shrine-cream border-shrine-red"
-                  : "border-shrine-gold/50 text-shrine-red/80 hover:bg-shrine-gold/10"
+                  ? "bg-shrine-red text-shrine-cream border-shrine-red scale-105"
+                  : "border-shrine-gold/60 text-shrine-red bg-shrine-cream hover:bg-shrine-gold/10"
               }`}
             >
               {tabLabels[key]}
