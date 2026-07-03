@@ -41,13 +41,14 @@ export default function GalleryContent() {
         {t.subtitle}
       </p>
 
-      {/* Masonry layout: each image keeps its natural aspect ratio, nothing is cropped */}
-      <div className="columns-2 sm:columns-3 gap-4 [column-fill:_balance]">
+      {/* Strict grid, left-to-right / top-to-bottom in the exact given order.
+          Row height follows the tallest image in that row, so nothing is cropped. */}
+      <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 items-start">
         {images.map((src, i) => (
           <button
             key={src}
             onClick={() => setSelected(src)}
-            className="mb-4 block w-full break-inside-avoid rounded-xl overflow-hidden border border-shrine-gold/30 card-shadow bg-shrine-paper"
+            className="block w-full rounded-xl overflow-hidden border border-shrine-gold/30 card-shadow bg-shrine-paper"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
