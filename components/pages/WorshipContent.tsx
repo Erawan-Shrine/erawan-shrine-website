@@ -1,6 +1,7 @@
 "use client";
 
 import { useLanguage } from "@/context/LanguageContext";
+import { thaiText } from "@/lib/thaiText";
 
 const text = {
   th: {
@@ -93,7 +94,7 @@ export default function WorshipContent() {
         {t.title}
       </h1>
       <p className="text-center text-shrine-ink/70 max-w-xl mx-auto mb-12">
-        {t.subtitle}
+        {lang === "th" ? thaiText(t.subtitle) : t.subtitle}
       </p>
 
       {/* Steps */}
@@ -112,7 +113,9 @@ export default function WorshipContent() {
               </div>
               <div>
                 <h3 className="font-semibold text-shrine-ink">{s.title}</h3>
-                <p className="text-sm text-shrine-ink/70 mt-1">{s.desc}</p>
+                <p className="text-sm text-shrine-ink/70 mt-1">
+                  {lang === "th" ? thaiText(s.desc) : s.desc}
+                </p>
               </div>
             </li>
           ))}
@@ -133,7 +136,9 @@ export default function WorshipContent() {
               <div className="text-2xl">{o.icon}</div>
               <div>
                 <div className="font-medium text-shrine-ink">{o.name}</div>
-                <div className="text-xs text-shrine-ink/60">{o.meaning}</div>
+                <div className="text-xs text-shrine-ink/60">
+                  {lang === "th" ? thaiText(o.meaning) : o.meaning}
+                </div>
               </div>
             </div>
           ))}

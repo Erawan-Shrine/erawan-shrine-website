@@ -3,6 +3,7 @@
 import Link from "next/link";
 import PrayerChant from "@/components/PrayerChant";
 import { useLanguage } from "@/context/LanguageContext";
+import { thaiText } from "@/lib/thaiText";
 
 const text = {
   th: {
@@ -111,7 +112,7 @@ export default function HomeContent() {
           {t.facesTitle}
         </h2>
         <p className="text-center text-shrine-ink/80 leading-relaxed">
-          {t.facesText}
+          {lang === "th" ? thaiText(t.facesText) : t.facesText}
         </p>
       </section>
 
