@@ -12,8 +12,6 @@ const text = {
       "แม้พระพรหมจะเป็นเทพเจ้าในศาสนาฮินดู แต่ในบริบทของศาลพระพรหมเอราวัณ ได้รับการเคารพบูชาในฐานะเทพารักษ์ผู้ปกปักคุ้มครองตามความเชื่อพื้นบ้านของไทย สะท้อนถึงการผสมผสานกันระหว่างศาสนาฮินดูและพุทธศาสนาอย่างกลมกลืน",
       "ปัจจุบันศาลพระพรหมเอราวัณเป็นหนึ่งในสถานที่สักการะที่มีผู้คนทั้งชาวไทยและชาวต่างชาติ โดยเฉพาะนักท่องเที่ยวจากจีน ฮ่องกง สิงคโปร์ และไต้หวัน เดินทางมากราบไหว้ขอพรอย่างต่อเนื่องตลอดทั้งปี และเป็นที่นิยมของผู้ที่ต้องการว่าจ้างคณะรำไทยมาแก้บนเมื่อคำอธิษฐานสัมฤทธิ์ผล",
     ],
-    verifyNote:
-      "เนื้อหานี้ค้นคว้าจากแหล่งข้อมูลสาธารณะ ควรตรวจทานความถูกต้องกับทางศาลก่อนเผยแพร่จริง",
   },
   en: {
     title: "History of Erawan Shrine",
@@ -24,8 +22,6 @@ const text = {
       "Although Brahma is a deity of Hinduism, in the context of Erawan Shrine he is worshipped as a guardian spirit within Thai folk belief, reflecting a harmonious blending of Hinduism and Buddhism.",
       "Today, Erawan Shrine is one of Bangkok's most visited places of worship, drawing both Thai devotees and international visitors — especially from China, Hong Kong, Singapore, and Taiwan — year-round. It is also popular among those who hire Thai classical dance troupes to fulfil a vow after a prayer has been answered.",
     ],
-    verifyNote:
-      "This content was researched from public sources and should be verified with the shrine before official publication.",
   },
 };
 
@@ -44,10 +40,6 @@ export default function HistoryContent() {
           <p key={i}>{p}</p>
         ))}
       </div>
-
-      <p className="text-center text-xs text-shrine-ink/40 border-t border-shrine-gold/20 pt-6 mt-10">
-        {t.verifyNote}
-      </p>
     </div>
   );
 }

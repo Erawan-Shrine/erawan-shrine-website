@@ -36,13 +36,9 @@ const text = {
     etiquetteTitle: "ข้อควรปฏิบัติ",
     etiquette: [
       "แต่งกายสุภาพ ปกปิดไหล่และเข่า",
-      "ไม่เหยียบข้ามเครื่องสักการะที่วางอยู่บนพื้น",
-      "ไม่ชี้เท้าไปทางองค์พระพรหม",
       "พูดคุยเบาเสียงขณะอยู่ใกล้ผู้ที่กำลังสักการะ",
       "สามารถใส่รองเท้าได้ เนื่องจากศาลอยู่กลางแจ้ง",
     ],
-    verifyNote:
-      "ข้อมูลนี้รวบรวมจากการค้นคว้าและอาจต้องปรับปรุงให้ตรงกับแนวปฏิบัติจริงที่ศาล หากพบจุดใดคลาดเคลื่อน สามารถแจ้งเพื่อแก้ไขได้",
   },
   en: {
     title: "How to Worship at Erawan Shrine",
@@ -77,13 +73,9 @@ const text = {
     etiquetteTitle: "Etiquette",
     etiquette: [
       "Dress modestly, covering shoulders and knees",
-      "Do not step over offerings placed on the ground",
-      "Do not point your feet toward the Brahma image",
       "Keep your voice low near others who are praying",
       "Shoes may be kept on, as the shrine is outdoors",
     ],
-    verifyNote:
-      "This information was compiled from research and may need adjustment to match actual practice at the shrine. Please let us know if anything needs correcting.",
   },
 };
 
@@ -158,10 +150,6 @@ export default function WorshipContent() {
           ))}
         </ul>
       </section>
-
-      <p className="text-center text-xs text-shrine-ink/40 border-t border-shrine-gold/20 pt-6">
-        {t.verifyNote}
-      </p>
     </div>
   );
 }

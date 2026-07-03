@@ -5,13 +5,11 @@ import { useLanguage } from "@/context/LanguageContext";
 const text = {
   th: {
     title: "แกลเลอรีภาพ",
-    subtitle:
-      "ยังไม่มีรูปภาพจริง — ช่องด้านล่างเป็นตัวอย่างตำแหน่งสำหรับใส่ภาพถ่ายบรรยากาศศาล องค์พระพรหม และพิธีกรรมต่าง ๆ ในอนาคต",
+    subtitle: "ภาพบรรยากาศศาลพระพรหมเอราวัณ",
   },
   en: {
     title: "Gallery",
-    subtitle:
-      "No real photos yet — the boxes below are placeholders for future photos of the shrine, the Brahma image, and ceremonies.",
+    subtitle: "Photos of Erawan Shrine",
   },
 };
 
