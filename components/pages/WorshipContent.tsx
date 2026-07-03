@@ -31,7 +31,7 @@ const text = {
       { icon: "🕯️", name: "ธูป 3 ดอก", meaning: "การบูชาด้วยความศรัทธา" },
       { icon: "🔥", name: "เทียน 1 เล่ม", meaning: "แสงสว่างนำทางชีวิต" },
       { icon: "🐘", name: "ช้างไม้แกะสลัก", meaning: "ความแข็งแกร่ง ปัญญา และความมั่งคั่ง (เครื่องสักการะเสริม)" },
-      { icon: "💃", name: "ว่าจ้างรำถวาย", meaning: "แก้บนเมื่อพรสัมฤทธิ์ผล" },
+      { icon: "🎭", name: "ว่าจ้างรำถวาย", meaning: "แก้บนเมื่อพรสัมฤทธิ์ผล" },
     ],
     etiquetteTitle: "ข้อควรปฏิบัติ",
     etiquette: [
@@ -68,7 +68,7 @@ const text = {
       { icon: "🕯️", name: "3 incense sticks", meaning: "Devotion and faith" },
       { icon: "🔥", name: "1 candle", meaning: "Light guiding one's path" },
       { icon: "🐘", name: "Carved wooden elephant", meaning: "Strength, wisdom and prosperity (optional offering)" },
-      { icon: "💃", name: "Hiring a dance troupe", meaning: "To fulfil a vow once a prayer is answered" },
+      { icon: "🎭", name: "Hiring a dance troupe", meaning: "To fulfil a vow once a prayer is answered" },
     ],
     etiquetteTitle: "Etiquette",
     etiquette: [
@@ -143,8 +143,8 @@ export default function WorshipContent() {
         </h2>
         <ul className="space-y-2">
           {t.etiquette.map((e) => (
-            <li key={e} className="flex items-start gap-2 text-shrine-ink/80">
-              <span className="text-shrine-gold mt-1">✦</span>
+            <li key={e} className="flex items-center gap-2 text-shrine-ink/80">
+              <span className="text-shrine-gold leading-none">✦</span>
               <span>{e}</span>
             </li>
           ))}
