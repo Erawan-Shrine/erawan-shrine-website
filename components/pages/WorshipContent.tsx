@@ -10,7 +10,7 @@ const text = {
     steps: [
       {
         title: "ซื้อชุดเครื่องสักการะ",
-        desc: "เลือกซื้อชุดไหว้ (ธูป เทียน พวงมาลัย) จากร้านค้าบริเวณศาล ราคาประมาณ 20–50 บาทต่อชุด",
+        desc: "เลือกซื้อชุดไหว้ (ธูป เทียน พวงมาลัย) จากร้านค้าบริเวณศาล ราคาประมาณ 60 บาทต่อชุด",
       },
       {
         title: "เริ่มไหว้ที่หน้าแรก",
@@ -31,7 +31,7 @@ const text = {
       { icon: "🕯️", name: "ธูป 3 ดอก", meaning: "การบูชาด้วยความศรัทธา" },
       { icon: "🔥", name: "เทียน 1 เล่ม", meaning: "แสงสว่างนำทางชีวิต" },
       { icon: "🐘", name: "ช้างไม้แกะสลัก", meaning: "ความแข็งแกร่ง ปัญญา และความมั่งคั่ง (เครื่องสักการะเสริม)" },
-      { icon: "🎭", name: "ว่าจ้างรำถวาย", meaning: "แก้บนเมื่อพรสัมฤทธิ์ผล" },
+      { icon: "🎶", name: "ว่าจ้างรำถวาย", meaning: "แก้บนเมื่อพรสัมฤทธิ์ผล" },
     ],
     etiquetteTitle: "ข้อควรปฏิบัติ",
     etiquette: [
@@ -47,7 +47,7 @@ const text = {
     steps: [
       {
         title: "Buy an offering set",
-        desc: "Purchase a worship set (incense, candle, garland) from vendors around the shrine, typically 20–50 THB per set.",
+        desc: "Purchase a worship set (incense, candle, garland) from vendors around the shrine, typically 60 THB per set.",
       },
       {
         title: "Begin at the first face",
@@ -68,7 +68,7 @@ const text = {
       { icon: "🕯️", name: "3 incense sticks", meaning: "Devotion and faith" },
       { icon: "🔥", name: "1 candle", meaning: "Light guiding one's path" },
       { icon: "🐘", name: "Carved wooden elephant", meaning: "Strength, wisdom and prosperity (optional offering)" },
-      { icon: "🎭", name: "Hiring a dance troupe", meaning: "To fulfil a vow once a prayer is answered" },
+      { icon: "🎶", name: "Hiring traditional Thai dancers", meaning: "To fulfil a vow once a prayer is answered" },
     ],
     etiquetteTitle: "Etiquette",
     etiquette: [
