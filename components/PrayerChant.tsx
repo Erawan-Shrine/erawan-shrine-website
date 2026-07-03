@@ -85,7 +85,7 @@ export default function PrayerChant() {
 
       <div className="relative">
         <div className="divider-ornament mb-6">
-          <span className="text-shrine-gold text-xs uppercase">
+          <span className="text-shrine-gold text-xs">
             บทสวดหลัก
           </span>
         </div>
@@ -94,7 +94,7 @@ export default function PrayerChant() {
           {chant.title}
         </h2>
 
-        <p className="text-center text-xs text-shrine-ink/50 mb-3 uppercase">
+        <p className="text-center text-xs text-shrine-ink/50 mb-3">
           เลือกภาษาบทสวด · Select chant language
         </p>
         <div className="flex justify-center gap-3 mb-8 flex-wrap">
