@@ -152,8 +152,8 @@ export default function WorshipContent() {
         </h2>
         <ul className="space-y-2">
           {t.etiquette.map((e) => (
-            <li key={e} className="flex items-center gap-2 text-shrine-ink/80">
-              <span className="text-shrine-gold leading-none">✦</span>
+            <li key={e} className="flex items-start gap-2 text-shrine-ink/80">
+              <span className="text-shrine-gold leading-relaxed">✦</span>
               <span>{e}</span>
             </li>
           ))}
