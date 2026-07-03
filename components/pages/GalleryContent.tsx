@@ -15,22 +15,82 @@ const text = {
 };
 
 const images = [
-  "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084289/ErawanShrine1_zy7uce.jpg",
-  "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084290/ErawanShrine2_qhe7lx.jpg",
-  "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084289/ErawanShrine3_dvoewt.jpg",
-  "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084290/ErawanShrine4_ie8skm.jpg",
-  "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084290/ErawanShrine5_dew3wa.jpg",
-  "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084290/ErawanShrine6_tvu8py.jpg",
-  "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084290/ErawanShrine7_bfmjia.jpg",
-  "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084290/ErawanShrine8_eyeta0.jpg",
-  "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084291/ErawanShrine10_oz4lhv.jpg",
-  "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084290/ErawanShrine9_k4yppc.jpg",
+  {
+    src: "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084289/ErawanShrine1_zy7uce.jpg",
+    alt: {
+      th: "มุมมองจากมุมสูงของลานศาลพระพรหมเอราวัณและผู้มาสักการะ หน้าโรงแรมแกรนด์ ไฮแอท เอราวัณ",
+      en: "Aerial view of the Erawan Shrine plaza and worshippers in front of the Grand Hyatt Erawan Bangkok",
+    },
+  },
+  {
+    src: "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084290/ErawanShrine2_qhe7lx.jpg",
+    alt: {
+      th: "องค์พระพรหมสี่หน้าปิดทองภายในศาลา ประดับด้วยพวงมาลัยดอกดาวเรือง",
+      en: "The gold Four-Faced Brahma image inside its shrine pavilion, decorated with marigold garlands",
+    },
+  },
+  {
+    src: "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084289/ErawanShrine3_dvoewt.jpg",
+    alt: {
+      th: "ศาลาประดิษฐานพระพรหมเอราวัณ มองเห็นรางรถไฟฟ้า BTS ด้านหลัง",
+      en: "The Brahma shrine pavilion with the BTS Skytrain tracks visible behind it",
+    },
+  },
+  {
+    src: "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084290/ErawanShrine4_ie8skm.jpg",
+    alt: {
+      th: "ศาลาพระพรหมเอราวัณกับพวงมาลัยดอกดาวเรืองเบื้องหน้า และตึกกระจกด้านหลัง",
+      en: "The shrine pavilion with marigold garland offerings in the foreground and modern glass buildings behind",
+    },
+  },
+  {
+    src: "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084290/ErawanShrine5_dew3wa.jpg",
+    alt: {
+      th: "ภาพระยะใกล้พระพักตร์และพระวรกายปิดทองขององค์พระพรหมสี่หน้า",
+      en: "Close-up of the gilded face and figure of the Four-Faced Brahma image",
+    },
+  },
+  {
+    src: "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084290/ErawanShrine6_tvu8py.jpg",
+    alt: {
+      th: "องค์พระพรหมมองผ่านซุ้มกระจกสีของศาลา พร้อมพานดอกไม้ถวาย",
+      en: "The Brahma image viewed through the mirrored glass archway of the pavilion, with a floral offering tray",
+    },
+  },
+  {
+    src: "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084290/ErawanShrine7_bfmjia.jpg",
+    alt: {
+      th: "ศาลาพระพรหมเอราวัณยามเย็น มีพวงมาลัยดอกดาวเรืองและช้างไม้แกะสลักวางถวาย",
+      en: "The shrine pavilion with marigold garlands and carved elephant offerings placed around its base",
+    },
+  },
+  {
+    src: "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084290/ErawanShrine8_eyeta0.jpg",
+    alt: {
+      th: "มุมมองจากด้านบนของศาลาพระพรหม มีนางรำกำลังแสดงถวายและผู้คนมากราบไหว้",
+      en: "Elevated view of the shrine pavilion with traditional dancers performing an offering and devotees paying respects",
+    },
+  },
+  {
+    src: "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084291/ErawanShrine10_oz4lhv.jpg",
+    alt: {
+      th: "แผงจำหน่ายช้างไม้แกะสลักและเครื่องสักการะบริเวณศาลพระพรหมเอราวัณ",
+      en: "A vendor stall selling carved elephant statues and offerings near Erawan Shrine",
+    },
+  },
+  {
+    src: "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084290/ErawanShrine9_k4yppc.jpg",
+    alt: {
+      th: "นางรำไทยในชุดโบราณกำลังแสดงรำถวายแก้บนที่ศาลพระพรหมเอราวัณ",
+      en: "Traditional Thai dancers in classical costume performing a votive dance offering at Erawan Shrine",
+    },
+  },
 ];
 
 export default function GalleryContent() {
   const { lang } = useLanguage();
   const t = text[lang];
-  const [selected, setSelected] = useState<string | null>(null);
+  const [selected, setSelected] = useState<{ src: string; alt: string } | null>(null);
 
   return (
     <div className="mx-auto max-w-5xl px-4 sm:px-6 py-14">
@@ -44,16 +104,16 @@ export default function GalleryContent() {
       {/* Strict grid, left-to-right / top-to-bottom in the exact given order.
           Row height follows the tallest image in that row, so nothing is cropped. */}
       <div className="grid grid-cols-2 sm:grid-cols-3 gap-4 items-start">
-        {images.map((src, i) => (
+        {images.map((img) => (
           <button
-            key={src}
-            onClick={() => setSelected(src)}
+            key={img.src}
+            onClick={() => setSelected({ src: img.src, alt: img.alt[lang] })}
             className="block w-full rounded-xl overflow-hidden border border-shrine-gold/30 card-shadow bg-shrine-paper"
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={src}
-              alt={`Erawan Shrine ${i + 1}`}
+              src={img.src}
+              alt={img.alt[lang]}
               className="w-full h-auto block"
               loading="lazy"
             />
@@ -69,8 +129,8 @@ export default function GalleryContent() {
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={selected}
-            alt="Erawan Shrine"
+            src={selected.src}
+            alt={selected.alt}
             className="max-h-[90vh] max-w-[95vw] w-auto h-auto object-contain rounded-lg"
           />
           <button
