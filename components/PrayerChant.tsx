@@ -4,9 +4,10 @@ import { useState } from "react";
 
 type Lang = "th" | "en" | "zh";
 
-const chants: Record<Lang, { title: string; lines: string[] }> = {
+const chants: Record<Lang, { title: string; lines: string[]; note: string }> = {
   th: {
     title: "คาถาบูชาพระพรหม (ท้าวมหาพรหม)",
+    note: "สวดด้วยความเคารพและจิตใจที่สงบ สามารถสวดซ้ำได้ 3 หรือ 9 จบ",
     lines: [
       "โอมปะระเมสะ นะมัสการัม",
       "องการะนิสสะวะรัง พรหมเวสสะยัม",
@@ -24,6 +25,7 @@ const chants: Record<Lang, { title: string; lines: string[] }> = {
   },
   en: {
     title: "Four Face Brahma Bhucha Chanting",
+    note: "Chant with respect and a calm mind. You may repeat the chant 3 or 9 times.",
     lines: [
       "Om paramesa namaskaram",
       "Ongkara nissavarang",
@@ -43,6 +45,7 @@ const chants: Record<Lang, { title: string; lines: string[] }> = {
   },
   zh: {
     title: "四面佛經咒",
+    note: "请以恭敬、平静的心持诵。可持诵 3 遍或 9 遍。",
     lines: [
       "吽叭喇咪薩 那媽薩噶嚷",
       "吽噶喇呢薩哇嚷 嘭喂薩呀么",
@@ -117,7 +120,7 @@ export default function PrayerChant() {
         </div>
 
         <p className="text-center text-xs text-shrine-ink/50 mt-8">
-          สวดด้วยความเคารพและจิตใจที่สงบ สามารถสวดซ้ำได้ 3 หรือ 9 จบ
+          {chant.note}
         </p>
       </div>
     </div>
