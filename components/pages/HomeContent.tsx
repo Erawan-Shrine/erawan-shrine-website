@@ -9,16 +9,9 @@ const text = {
     title: "ศาลพระพรหมเอราวัณ",
     subtitle: "Erawan Shrine — ท้าวมหาพรหม สี่แยกราชประสงค์ กรุงเทพฯ",
     lead: "บทสวดบูชาพระพรหมสี่หน้า พร้อมคำแปลไทย · อังกฤษ · จีน สำหรับผู้ศรัทธาที่มาสักการะ ณ ศาลพระพรหมเอราวัณ",
-    facesLabel: "ความหมายสี่หน้า",
-    facesTitle: "พระพรหมสี่หน้า ประทานพรครบทุกด้าน",
-    facesNote:
-      "เดินเวียนขวา (ตามเข็มนาฬิกา) ครบทั้ง 4 หน้า พร้อมจุดธูป 3 ดอก วางเทียน 1 เล่ม และพวงมาลัย 1 พวงในแต่ละหน้า",
-    faces: [
-      { title: "หน้าที่ 1", meaning: "หน้าที่การงาน", icon: "💼" },
-      { title: "หน้าที่ 2", meaning: "ความรักและครอบครัว", icon: "❤️" },
-      { title: "หน้าที่ 3", meaning: "โชคลาภและทรัพย์สิน", icon: "💰" },
-      { title: "หน้าที่ 4", meaning: "สุขภาพและความปลอดภัย", icon: "🌿" },
-    ],
+    facesTitle: "ความหมายแห่งพระพรหมสี่พักตร์",
+    facesText:
+      "ตามคติความเชื่อ พระพรหมสี่พักตร์สื่อถึงการแผ่พระเมตตาและการดูแลคุ้มครองในทุกทิศทาง ผู้ศรัทธานิยมสักการะครบทั้งสี่พักตร์ เพื่อความเป็นสิริมงคลในชีวิต ทั้งด้านการงาน ความสัมพันธ์ โชคลาภ สุขภาพ และความปลอดภัย",
     learnMore: "เรียนรู้เพิ่มเติม",
     links: [
       {
@@ -51,16 +44,9 @@ const text = {
     title: "Erawan Shrine",
     subtitle: "Thao Maha Phrom — Ratchaprasong, Bangkok",
     lead: "The Four-Faced Brahma chanting prayer, with Thai, English and Chinese translations, for devotees visiting Erawan Shrine.",
-    facesLabel: "Meaning of the Four Faces",
-    facesTitle: "The Four-Faced Brahma grants blessings in every aspect of life",
-    facesNote:
-      "Walk clockwise past all four faces, lighting 3 incense sticks, placing 1 candle and 1 garland at each face.",
-    faces: [
-      { title: "Face 1", meaning: "Career & Work", icon: "💼" },
-      { title: "Face 2", meaning: "Love & Family", icon: "❤️" },
-      { title: "Face 3", meaning: "Fortune & Wealth", icon: "💰" },
-      { title: "Face 4", meaning: "Health & Safety", icon: "🌿" },
-    ],
+    facesTitle: "The Meaning of the Four-Faced Brahma",
+    facesText:
+      "According to tradition, the four faces of Brahma represent the spreading of compassion and protection in every direction. Devotees customarily pay respects to all four faces to bring blessings in every aspect of life — career, relationships, fortune, health, and safety.",
     learnMore: "Learn More",
     links: [
       {
@@ -119,31 +105,13 @@ export default function HomeContent() {
       </section>
 
       {/* Four faces */}
-      <section className="mx-auto max-w-5xl px-4 sm:px-6 py-14">
-        <div className="divider-ornament mb-3 max-w-xs mx-auto">
-          <span className="text-shrine-gold text-xs whitespace-nowrap">
-            {t.facesLabel}
-          </span>
-        </div>
-        <h2 className="font-display text-2xl sm:text-3xl font-semibold text-shrine-red text-center mb-8">
+      <section className="mx-auto max-w-3xl px-4 sm:px-6 py-14">
+        <div className="divider-ornament mb-6 max-w-xs mx-auto" />
+        <h2 className="font-display text-2xl sm:text-3xl font-semibold text-shrine-red text-center mb-6">
           {t.facesTitle}
         </h2>
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-4">
-          {t.faces.map((f) => (
-            <div
-              key={f.title}
-              className="rounded-xl bg-shrine-paper border border-shrine-gold/30 card-shadow p-5 text-center"
-            >
-              <div className="text-3xl mb-2">{f.icon}</div>
-              <div className="text-xs text-shrine-gold mb-1">
-                {f.title}
-              </div>
-              <div className="font-medium text-shrine-ink">{f.meaning}</div>
-            </div>
-          ))}
-        </div>
-        <p className="text-center text-xs text-shrine-ink/50 mt-6">
-          {t.facesNote}
+        <p className="text-center text-shrine-ink/80 leading-relaxed">
+          {t.facesText}
         </p>
       </section>
 
