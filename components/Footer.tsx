@@ -20,7 +20,7 @@ const text = {
     hours: "Open daily 06:00 – 22:00\nFree admission",
     aboutTitle: "About this site",
     about:
-      "Created to share the Brahma chanting prayer and worship information for devotees who scan the QR Code at Erawan Shrine.",
+      "Created to share the Brahma chanting prayer and worship information for devotees — Erawan Shrine.",
     copyright: "Erawan Shrine — built with faith",
   },
 };
