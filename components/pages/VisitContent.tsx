@@ -6,7 +6,7 @@ const text = {
   th: {
     title: "ข้อมูลการเดินทาง",
     hoursTitle: "เวลาเปิด-ปิด",
-    hours: "ทุกวัน 06:00 – 22:00 น.",
+    hours: "เปิดทุกวันเวลา 06:00 น. และปิดเวลา 22:00 น.",
     free: "ไม่มีค่าเข้าชม",
     addressTitle: "ที่อยู่",
     address: "สี่แยกราชประสงค์ ถนนราชดำริ แขวงลุมพินี เขตปทุมวัน กรุงเทพมหานคร 10330",
@@ -16,6 +16,10 @@ const text = {
       {
         icon: "🚉",
         text: "รถไฟฟ้า BTS สายสุขุมวิท ลงสถานีชิดลม (Chit Lom) ทางออก 8 เดินเชื่อมสกายวอล์กมาที่สี่แยกราชประสงค์",
+      },
+      {
+        icon: "🚇",
+        text: "รถไฟฟ้าใต้ดิน MRT: ไม่มีสถานีอยู่ติดศาลโดยตรง แนะนำเปลี่ยนขึ้น BTS ที่สถานีสุขุมวิท (เชื่อมต่อกับ MRT อโศก) แล้วนั่งมาลงสถานีชิดลม",
       },
       { icon: "🚌", text: "รถประจำทางสาย 15, 25, 40 และสายอื่น ๆ ที่ผ่านถนนราชดำริ" },
       {
@@ -27,7 +31,7 @@ const text = {
   en: {
     title: "Visitor Information",
     hoursTitle: "Opening Hours",
-    hours: "Daily 06:00 – 22:00",
+    hours: "Opens daily at 6:00 AM and closes at 10:00 PM.",
     free: "Free admission",
     addressTitle: "Address",
     address: "Ratchaprasong Intersection, Ratchadamri Road, Lumphini, Pathum Wan, Bangkok 10330",
@@ -37,6 +41,10 @@ const text = {
       {
         icon: "🚉",
         text: "BTS Sukhumvit Line to Chit Lom station, Exit 8, then walk via the skywalk to Ratchaprasong intersection.",
+      },
+      {
+        icon: "🚇",
+        text: "MRT: There is no MRT station directly at the shrine. From MRT Sukhumvit station (interchange with BTS Asok), transfer to the BTS and ride to Chit Lom station.",
       },
       { icon: "🚌", text: "Bus routes 15, 25, 40 and others that run along Ratchadamri Road." },
       {
