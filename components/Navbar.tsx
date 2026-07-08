@@ -6,12 +6,12 @@ import { useLanguage } from "@/context/LanguageContext";
 import LanguageToggle from "@/components/LanguageToggle";
 
 const links = [
-  { href: "/", th: "หน้าแรก", en: "Home" },
-  { href: "/#prayer", th: "บทสวดมนต์", en: "Prayer" },
-  { href: "/worship", th: "วิธีสักการะ", en: "How to Worship" },
-  { href: "/history", th: "ประวัติศาล", en: "History" },
-  { href: "/visit", th: "การเดินทาง", en: "Visit" },
-  { href: "/gallery", th: "แกลเลอรี", en: "Gallery" },
+  { href: "/", th: "หน้าแรก", en: "Home", zh: "首頁" },
+  { href: "/#prayer", th: "บทสวดมนต์", en: "Prayer", zh: "經咒" },
+  { href: "/worship", th: "วิธีสักการะ", en: "How to Worship", zh: "參拜方式" },
+  { href: "/history", th: "ประวัติศาล", en: "History", zh: "歷史沿革" },
+  { href: "/visit", th: "การเดินทาง", en: "Visit", zh: "交通資訊" },
+  { href: "/gallery", th: "แกลเลอรี", en: "Gallery", zh: "相片集" },
 ];
 
 export default function Navbar() {
@@ -25,7 +25,7 @@ export default function Navbar() {
           <Link href="/" className="flex items-center gap-2 shrink-0">
             <span className="text-2xl">🙏</span>
             <span className="font-display font-semibold text-shrine-goldLight text-base sm:text-xl">
-              {lang === "th" ? "ศาลพระพรหมเอราวัณ" : "Erawan Shrine"}
+              {lang === "th" ? "ศาลพระพรหมเอราวัณ" : lang === "zh" ? "伊拉旺神壇" : "Erawan Shrine"}
             </span>
           </Link>
 
@@ -36,7 +36,7 @@ export default function Navbar() {
                 href={l.href}
                 className="hover:text-shrine-goldLight transition-colors"
               >
-                {lang === "th" ? l.th : l.en}
+                {lang === "th" ? l.th : lang === "zh" ? l.zh : l.en}
               </Link>
             ))}
           </nav>
@@ -64,7 +64,7 @@ export default function Navbar() {
                 onClick={() => setOpen(false)}
                 className="py-1 hover:text-shrine-goldLight transition-colors"
               >
-                {lang === "th" ? l.th : l.en}
+                {lang === "th" ? l.th : lang === "zh" ? l.zh : l.en}
               </Link>
             ))}
           </div>

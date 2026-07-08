@@ -12,6 +12,10 @@ const text = {
     title: "Gallery",
     subtitle: "Photos of Erawan Shrine",
   },
+  zh: {
+    title: "相片集",
+    subtitle: "伊拉旺神壇現場相片",
+  },
 };
 
 const images = [
@@ -20,6 +24,7 @@ const images = [
     alt: {
       th: "มุมมองจากมุมสูงของลานศาลพระพรหมเอราวัณและผู้มาสักการะ หน้าโรงแรมแกรนด์ ไฮแอท เอราวัณ",
       en: "Aerial view of the Erawan Shrine plaza and worshippers in front of the Grand Hyatt Erawan Bangkok",
+      zh: "從高處俯瞰伊拉旺神壇廣場與前來參拜的信眾，背景為曼谷君悅酒店",
     },
   },
   {
@@ -27,6 +32,7 @@ const images = [
     alt: {
       th: "องค์พระพรหมสี่หน้าปิดทองภายในศาลา ประดับด้วยพวงมาลัยดอกดาวเรือง",
       en: "The gold Four-Faced Brahma image inside its shrine pavilion, decorated with marigold garlands",
+      zh: "供奉於亭閣內的金色四面梵天神像，四周裝飾著萬壽菊花環",
     },
   },
   {
@@ -34,6 +40,7 @@ const images = [
     alt: {
       th: "ศาลาประดิษฐานพระพรหมเอราวัณ มองเห็นรางรถไฟฟ้า BTS ด้านหลัง",
       en: "The Brahma shrine pavilion with the BTS Skytrain tracks visible behind it",
+      zh: "供奉梵天神像的亭閣，後方可見BTS空鐵軌道",
     },
   },
   {
@@ -41,6 +48,7 @@ const images = [
     alt: {
       th: "ศาลาพระพรหมเอราวัณกับพวงมาลัยดอกดาวเรืองเบื้องหน้า และตึกกระจกด้านหลัง",
       en: "The shrine pavilion with marigold garland offerings in the foreground and modern glass buildings behind",
+      zh: "神壇亭閣前方擺放著萬壽菊花環供品，背景為現代玻璃帷幕大樓",
     },
   },
   {
@@ -48,6 +56,7 @@ const images = [
     alt: {
       th: "ภาพระยะใกล้พระพักตร์และพระวรกายปิดทองขององค์พระพรหมสี่หน้า",
       en: "Close-up of the gilded face and figure of the Four-Faced Brahma image",
+      zh: "四面梵天神像金色面容與身軀的特寫",
     },
   },
   {
@@ -55,6 +64,7 @@ const images = [
     alt: {
       th: "องค์พระพรหมมองผ่านซุ้มกระจกสีของศาลา พร้อมพานดอกไม้ถวาย",
       en: "The Brahma image viewed through the mirrored glass archway of the pavilion, with a floral offering tray",
+      zh: "透過亭閣彩色鏡面拱門所見的梵天神像，前方擺放著獻花供盤",
     },
   },
   {
@@ -62,6 +72,7 @@ const images = [
     alt: {
       th: "ศาลาพระพรหมเอราวัณยามเย็น มีพวงมาลัยดอกดาวเรืองและช้างไม้แกะสลักวางถวาย",
       en: "The shrine pavilion with marigold garlands and carved elephant offerings placed around its base",
+      zh: "傍晚時分的神壇亭閣，基座周圍擺放著萬壽菊花環與木雕大象供品",
     },
   },
   {
@@ -69,6 +80,7 @@ const images = [
     alt: {
       th: "มุมมองจากด้านบนของศาลาพระพรหม มีนางรำกำลังแสดงถวายและผู้คนมากราบไหว้",
       en: "Elevated view of the shrine pavilion with traditional dancers performing an offering and devotees paying respects",
+      zh: "從高處拍攝的神壇亭閣，可見舞者正在表演還願舞蹈，信眾則在一旁參拜",
     },
   },
   {
@@ -76,6 +88,7 @@ const images = [
     alt: {
       th: "แผงจำหน่ายช้างไม้แกะสลักและเครื่องสักการะบริเวณศาลพระพรหมเอราวัณ",
       en: "A vendor stall selling carved elephant statues and offerings near Erawan Shrine",
+      zh: "伊拉旺神壇附近販售木雕大象與供品的攤位",
     },
   },
   {
@@ -83,6 +96,7 @@ const images = [
     alt: {
       th: "นางรำไทยในชุดโบราณกำลังแสดงรำถวายแก้บนที่ศาลพระพรหมเอราวัณ",
       en: "Traditional Thai dancers in classical costume performing a votive dance offering at Erawan Shrine",
+      zh: "身著傳統服飾的泰國舞者在伊拉旺神壇表演還願舞蹈",
     },
   },
 ];

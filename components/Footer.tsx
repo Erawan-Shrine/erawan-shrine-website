@@ -23,6 +23,16 @@ const text = {
       "Created to share the Brahma chanting prayer and worship information for devotees — Erawan Shrine.",
     copyright: "Erawan Shrine — built with faith",
   },
+  zh: {
+    name: "伊拉旺神壇",
+    address: "拉差帕頌路口，拉差丹利路，倫披尼\n巴吞旺區，曼谷 10330",
+    hoursTitle: "開放時間",
+    hours: "每日開放參拜 06:00 – 22:00\n免費入場",
+    aboutTitle: "關於本網站",
+    about:
+      "為傳播四面佛經咒與參拜資訊而製作，獻給前來伊拉旺神壇參拜的信眾。",
+    copyright: "伊拉旺神壇 — 以信仰而建",
+  },
 };
 
 export default function Footer() {

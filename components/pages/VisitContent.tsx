@@ -53,6 +53,31 @@ const text = {
       },
     ],
   },
+  zh: {
+    title: "交通資訊",
+    hoursTitle: "開放時間",
+    hours: "每日上午6點開放，晚上10點關閉。",
+    free: "免費參拜，無需門票",
+    addressTitle: "地址",
+    address: "泰國曼谷巴吞旺區拉差丹利路拉差帕頌路口，郵遞區號10330",
+    mapTitle: "伊拉旺神壇地圖",
+    travelTitle: "交通方式",
+    travel: [
+      {
+        icon: "🚉",
+        text: "搭乘BTS空鐵蘇坤蔚線至奇隆站（Chit Lom），由8號出口經天橋步行即可抵達拉差帕頌路口。",
+      },
+      {
+        icon: "🚇",
+        text: "MRT地鐵：神壇附近沒有直接連通的地鐵站，建議先搭至MRT蘇坤蔚站（可與BTS阿索克站轉乘），再轉乘BTS至奇隆站下車。",
+      },
+      { icon: "🚌", text: "可搭乘行經拉差丹利路的15、25、40路等多路公車。" },
+      {
+        icon: "🚕",
+        text: "搭乘計程車或叫車軟體，目的地請說明「Erawan Shrine, Ratchaprasong」（伊拉旺神壇，拉差帕頌）。",
+      },
+    ],
+  },
 };
 
 export default function VisitContent() {

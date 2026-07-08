@@ -76,6 +76,41 @@ const text = {
       },
     ],
   },
+  zh: {
+    title: "伊拉旺神壇",
+    subtitle: "Erawan Shrine — 他瓦瑪哈梵天 曼谷拉差帕頌路口",
+    lead: "四面佛經咒，附泰文、英文、中文翻譯，獻給前來伊拉旺神壇參拜的信眾。",
+    facesTitle: "四面佛的意義",
+    facesText:
+      "根據傳統信仰，四面佛的四張面容象徵著慈悲與庇佑遍及四方。信眾習慣依序參拜完整的四面，以祈求人生各方面的福澤，包括事業、人際關係、財運、健康與平安。",
+    learnMore: "了解更多",
+    links: [
+      {
+        href: "/worship",
+        title: "參拜方式",
+        desc: "參拜步驟、供品與注意事項",
+        icon: "🕯️",
+      },
+      {
+        href: "/history",
+        title: "神壇的歷史",
+        desc: "伊拉旺神壇自西元1956年以來的由來",
+        icon: "📜",
+      },
+      {
+        href: "/visit",
+        title: "交通資訊",
+        desc: "地圖、開放時間與交通方式",
+        icon: "🗺️",
+      },
+      {
+        href: "/gallery",
+        title: "相片集",
+        desc: "伊拉旺神壇的現場相片",
+        icon: "🖼️",
+      },
+    ],
+  },
 };
 
 export default function HomeContent() {
