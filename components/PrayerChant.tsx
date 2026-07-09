@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useLanguage } from "@/context/LanguageContext";
 
 type Lang = "th" | "en" | "zh";
 
@@ -66,14 +66,8 @@ const chants: Record<Lang, { title: string; lines: string[]; note: string }> = {
   },
 };
 
-const tabLabels: Record<Lang, string> = {
-  th: "ไทย",
-  en: "English",
-  zh: "中文",
-};
-
 export default function PrayerChant() {
-  const [lang, setLang] = useState<Lang>("th");
+  const { lang } = useLanguage();
   const chant = chants[lang];
 
   return (
@@ -93,25 +87,6 @@ export default function PrayerChant() {
         <h2 className="font-display text-2xl sm:text-3xl font-semibold text-shrine-red text-center mb-6">
           {chant.title}
         </h2>
-
-        <p className="text-center text-xs text-shrine-ink/50 mb-3">
-          เลือกภาษาบทสวด · Select chant language
-        </p>
-        <div className="flex justify-center gap-3 mb-8 flex-wrap">
-          {(Object.keys(tabLabels) as Lang[]).map((key) => (
-            <button
-              key={key}
-              onClick={() => setLang(key)}
-              className={`min-w-[110px] px-6 py-3 rounded-full text-lg sm:text-xl font-bold border-2 shadow-sm transition-colors ${
-                lang === key
-                  ? "bg-shrine-red text-shrine-cream border-shrine-red scale-105"
-                  : "border-shrine-gold/60 text-shrine-red bg-shrine-cream hover:bg-shrine-gold/10"
-              }`}
-            >
-              {tabLabels[key]}
-            </button>
-          ))}
-        </div>
 
         <div className="max-w-xl mx-auto text-center space-y-2 text-lg sm:text-xl leading-relaxed text-shrine-ink">
           {chant.lines.map((line, i) => (
