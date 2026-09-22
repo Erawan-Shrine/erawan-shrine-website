@@ -1,12 +1,8 @@
-import type { Metadata } from "next";
+import { pageMetadata } from "@/lib/metadata";
 import Script from "next/script";
 import VisitContent from "@/components/pages/VisitContent";
 
-export const metadata: Metadata = {
-  title: "ข้อมูลการเดินทาง | ศาลพระพรหมเอราวัณ",
-  description:
-    "ศาลพระพรหมเอราวัณเปิดกี่โมง ปิดกี่โมง แผนที่ เวลาเปิด-ปิด และวิธีเดินทางมาศาลพระพรหมเอราวัณ",
-};
+export const metadata = pageMetadata("/visit", "ศาลพระพรหมเอราวัณ เปิดกี่โมง | แผนที่และการเดินทาง", "ศาลพระพรหมเอราวัณเปิดกี่โมง ปิดกี่โมง แผนที่ เวลาเปิด-ปิด และวิธีเดินทางมาศาลพระพรหมเอราวัณ");
 
 const faqStructuredData = {
   "@context": "https://schema.org",

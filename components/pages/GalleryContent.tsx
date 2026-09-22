@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 
 const text = {
@@ -21,6 +21,8 @@ const text = {
 const images = [
   {
     src: "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084289/ErawanShrine1_zy7uce.jpg",
+    width: 1148,
+    height: 2040,
     alt: {
       th: "มุมมองจากมุมสูงของลานศาลพระพรหมเอราวัณและผู้มาสักการะ หน้าโรงแรมแกรนด์ ไฮแอท เอราวัณ",
       en: "Aerial view of the Erawan Shrine plaza and worshippers in front of the Grand Hyatt Erawan Bangkok",
@@ -29,6 +31,8 @@ const images = [
   },
   {
     src: "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084290/ErawanShrine2_qhe7lx.jpg",
+    width: 1148,
+    height: 2040,
     alt: {
       th: "องค์พระพรหมสี่หน้าปิดทองภายในศาลา ประดับด้วยพวงมาลัยดอกดาวเรือง",
       en: "The gold Four-Faced Brahma image inside its shrine pavilion, decorated with marigold garlands",
@@ -37,6 +41,8 @@ const images = [
   },
   {
     src: "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084289/ErawanShrine3_dvoewt.jpg",
+    width: 1148,
+    height: 2040,
     alt: {
       th: "ศาลาประดิษฐานพระพรหมเอราวัณ มองเห็นรางรถไฟฟ้า BTS ด้านหลัง",
       en: "The Brahma shrine pavilion with the BTS Skytrain tracks visible behind it",
@@ -45,6 +51,8 @@ const images = [
   },
   {
     src: "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084290/ErawanShrine4_ie8skm.jpg",
+    width: 1148,
+    height: 2040,
     alt: {
       th: "ศาลาพระพรหมเอราวัณกับพวงมาลัยดอกดาวเรืองเบื้องหน้า และตึกกระจกด้านหลัง",
       en: "The shrine pavilion with marigold garland offerings in the foreground and modern glass buildings behind",
@@ -53,6 +61,8 @@ const images = [
   },
   {
     src: "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084290/ErawanShrine5_dew3wa.jpg",
+    width: 1148,
+    height: 2040,
     alt: {
       th: "ภาพระยะใกล้พระพักตร์และพระวรกายปิดทองขององค์พระพรหมสี่หน้า",
       en: "Close-up of the gilded face and figure of the Four-Faced Brahma image",
@@ -61,6 +71,8 @@ const images = [
   },
   {
     src: "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084290/ErawanShrine6_tvu8py.jpg",
+    width: 1148,
+    height: 2040,
     alt: {
       th: "องค์พระพรหมมองผ่านซุ้มกระจกสีของศาลา พร้อมพานดอกไม้ถวาย",
       en: "The Brahma image viewed through the mirrored glass archway of the pavilion, with a floral offering tray",
@@ -69,6 +81,8 @@ const images = [
   },
   {
     src: "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084290/ErawanShrine7_bfmjia.jpg",
+    width: 1148,
+    height: 2040,
     alt: {
       th: "ศาลาพระพรหมเอราวัณยามเย็น มีพวงมาลัยดอกดาวเรืองและช้างไม้แกะสลักวางถวาย",
       en: "The shrine pavilion with marigold garlands and carved elephant offerings placed around its base",
@@ -77,6 +91,8 @@ const images = [
   },
   {
     src: "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084290/ErawanShrine8_eyeta0.jpg",
+    width: 1148,
+    height: 2040,
     alt: {
       th: "มุมมองจากด้านบนของศาลาพระพรหม มีนางรำกำลังแสดงถวายและผู้คนมากราบไหว้",
       en: "Elevated view of the shrine pavilion with traditional dancers performing an offering and devotees paying respects",
@@ -85,6 +101,8 @@ const images = [
   },
   {
     src: "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084291/ErawanShrine10_oz4lhv.jpg",
+    width: 1148,
+    height: 2040,
     alt: {
       th: "แผงจำหน่ายช้างไม้แกะสลักและเครื่องสักการะบริเวณศาลพระพรหมเอราวัณ",
       en: "A vendor stall selling carved elephant statues and offerings near Erawan Shrine",
@@ -93,6 +111,8 @@ const images = [
   },
   {
     src: "https://res.cloudinary.com/svvh2e0y/image/upload/v1783084290/ErawanShrine9_k4yppc.jpg",
+    width: 1148,
+    height: 2040,
     alt: {
       th: "นางรำไทยในชุดโบราณกำลังแสดงรำถวายแก้บนที่ศาลพระพรหมเอราวัณ",
       en: "Traditional Thai dancers in classical costume performing a votive dance offering at Erawan Shrine",
@@ -101,10 +121,36 @@ const images = [
   },
 ];
 
+function imageUrl(src: string, width: number) {
+  return src.replace("/image/upload/", `/image/upload/c_limit,w_${width}/f_auto/q_auto/`);
+}
+
 export default function GalleryContent() {
   const { lang } = useLanguage();
   const t = text[lang];
   const [selected, setSelected] = useState<{ src: string; alt: string } | null>(null);
+
+  const closeButton = useRef<HTMLButtonElement>(null);
+  useEffect(() => {
+    if (!selected) return;
+    const previousFocus = document.activeElement as HTMLElement | null;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = "hidden";
+    closeButton.current?.focus();
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setSelected(null);
+      if (event.key === "Tab") {
+        event.preventDefault();
+        closeButton.current?.focus();
+      }
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      document.body.style.overflow = previousOverflow;
+      previousFocus?.focus();
+    };
+  }, [selected]);
 
   return (
     <div className="mx-auto max-w-5xl px-4 sm:px-6 py-14">
@@ -126,8 +172,13 @@ export default function GalleryContent() {
           >
             {/* eslint-disable-next-line @next/next/no-img-element */}
             <img
-              src={img.src}
+              src={imageUrl(img.src, 640)}
+              srcSet={[320, 480, 640, 960].map((width) => `${imageUrl(img.src, width)} ${width}w`).join(", ")}
+              sizes="(max-width: 639px) calc((100vw - 48px) / 2), (max-width: 1023px) calc((100vw - 80px) / 3), 315px"
+              decoding="async"
               alt={img.alt[lang]}
+              width={img.width}
+              height={img.height}
               className="w-full h-auto block"
               loading="lazy"
             />
@@ -138,19 +189,23 @@ export default function GalleryContent() {
       {/* Lightbox */}
       {selected && (
         <div
+          role="dialog"
+          aria-modal="true"
+          aria-label={selected.alt}
           className="fixed inset-0 z-[100] bg-black/85 flex items-center justify-center p-4 cursor-zoom-out"
           onClick={() => setSelected(null)}
         >
           {/* eslint-disable-next-line @next/next/no-img-element */}
           <img
-            src={selected.src}
+            src={imageUrl(selected.src, 2048)}
             alt={selected.alt}
             className="max-h-[90vh] max-w-[95vw] w-auto h-auto object-contain rounded-lg"
           />
           <button
             onClick={() => setSelected(null)}
             className="absolute top-4 right-4 sm:top-6 sm:right-6 text-white text-3xl leading-none"
-            aria-label="close"
+            ref={closeButton}
+            aria-label={lang === "th" ? "ปิดภาพ" : lang === "zh" ? "關閉圖片" : "Close image"}
           >
             ✕
           </button>
