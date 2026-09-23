@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useState } from "react";
 import { useLanguage } from "@/context/LanguageContext";
 import LanguageToggle from "@/components/LanguageToggle";
+import { localizedPath } from "@/lib/i18n";
 
 const links = [
   { href: "/", th: "หน้าแรก", en: "Home", zh: "首頁" },
@@ -22,7 +23,7 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 bg-shrine-redDark/95 backdrop-blur text-shrine-cream shadow-lg">
       <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <div className="flex h-16 items-center justify-between gap-3">
-          <Link href="/" className="flex items-center gap-2 shrink-0">
+          <Link href={localizedPath(lang, "/")} className="flex items-center gap-2 shrink-0">
             <span className="text-2xl">🙏</span>
             <span className="font-display font-semibold text-shrine-goldLight text-base sm:text-xl">
               {lang === "th" ? "ศาลพระพรหมเอราวัณ" : lang === "zh" ? "伊拉旺神壇" : "Erawan Shrine"}
@@ -33,7 +34,7 @@ export default function Navbar() {
             {links.map((l) => (
               <Link
                 key={l.href}
-                href={l.href}
+                href={localizedPath(lang, l.href)}
                 className="hover:text-shrine-goldLight transition-colors"
               >
                 {lang === "th" ? l.th : lang === "zh" ? l.zh : l.en}
@@ -60,7 +61,7 @@ export default function Navbar() {
             {links.map((l) => (
               <Link
                 key={l.href}
-                href={l.href}
+                href={localizedPath(lang, l.href)}
                 onClick={() => setOpen(false)}
                 className="py-1 hover:text-shrine-goldLight transition-colors"
               >

@@ -4,6 +4,7 @@ import Link from "next/link";
 import PrayerChant from "@/components/PrayerChant";
 import { useLanguage } from "@/context/LanguageContext";
 import { thaiText } from "@/lib/thaiText";
+import { localizedPath } from "@/lib/i18n";
 
 const text = {
   th: {
@@ -161,7 +162,7 @@ export default function HomeContent() {
             {t.links.map((q) => (
               <Link
                 key={q.href}
-                href={q.href}
+                href={localizedPath(lang, q.href)}
                 className="group rounded-xl bg-shrine-paper border border-shrine-gold/30 card-shadow p-6 flex items-start gap-4 hover:border-shrine-gold transition-colors"
               >
                 <div className="text-3xl">{q.icon}</div>
